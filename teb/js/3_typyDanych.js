@@ -77,6 +77,7 @@ Użytkownik podaje z klawiatury długość boku kwadratu
 wyświetl na ekranie w formacie "długość boku wynosi:...cm" "Pole kwadratu wynosi:...cm2"
 */
 
+/*
 var kwadrat = prompt("Podaj długość boku kwadratu", "np.: 5");
 
 var pole;
@@ -87,7 +88,19 @@ pole = kwadrat * kwadrat;
 document.write("Długość boku kwadratu wynosi: "+kwadrat+"cm" + "<br>");
 
 document.write("Pole kwadratu wynosi: "+pole+"cm<sup>2</sup>");
+*/
 
 //zadanie domowe
 
 //Napisz program obliczający pole trójkąta!!!!
+
+var trojkat = prompt("Podaj długość podstawy trojkata", "np.: 5");
+var wysokosc = prompt("Podaj wysokość przylegającą do podstawy trojkata", "np.:2.5");
+trojkat = parseFloat(trojkat);
+wysokosc = parseFloat(wysokosc);
+
+var polet = trojkat * wysokosc /2;
+
+document.write("Długość podstawy trojkąta wynosi: "+trojkat+"cm" + "<br>");
+document.write("Wysokość trojkąta wynosi: "+wysokosc+"cm" + "<br>");
+document.write("Pole trojkąta wynosi: "+polet+"cm<sup>2</sup>");

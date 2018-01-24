@@ -12,11 +12,11 @@
         <div id="d3"></div>
         <div id="d4"></div>
         <div id="d5"></div>-->
-       <div class="lewy" id="x"></div>
-        <div class="lewy">+</div>
-        <div class="lewy" id="y"></div>
-        <div class="lewy">=</div>
-        <div class="lewy" id="wynik"></div>
+       <div id="x" style="float: left;"></div>
+        <div style="float: left;">+</div>
+        <div id="y" style="float: left;"></div>
+        <div style="float: left;">=</div>
+        <div id="wynik" style="float: left;"></div>
                 <script>
             var x = prompt("Podaj x");
             x = parseFloat(x);
@@ -27,6 +27,8 @@
              var divY = document.getElementById("y");
              divY.innerHTML = y;
             var suma = x+y;
+            var wynik = document.getElementById("wynik");
+            wynik.innerHTML = suma;
 
 </script>
     </body>

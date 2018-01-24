@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Systemy liczbowe</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <script>
+            document.write("<h1>Witaj Anna</h1>")
+            /*
+                document - obiekt
+                "." - operator elementu składowego
+                write("<h1>...</h1>") - metoda
+                "<h1>...</h1>" - parametr
+            */
+
+
+
+        </script>
+        <h2>Systemy Liczbowe</h2>
+        Wynik zamiany systemu hex na dziesiętny wynosi:
+        <div id="szesnastkowa"></div>
+        <script>
+            var dziesietna = 15; //liczba decymalna
+            var oktalna = 015; //liczba oktalna - ósemkowa
+            var hex = 0xA2; //liczba hexadecymalna
+            document.write("Liczba oktalna (15)<sub>8</sub> wynosi ("+oktalna+")<sub>10</sub>");
+            var szesnastkowa = document.getElementById("szesnastkowa");
+            szesnastkowa.style.color = "#2b2bea";
+            szesnastkowa.innerHTML = hex;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DIV - suma</title>
+        <link rel="stylesheet" href="style/style1.css">
+
+        <script>
+            function poleObjetosc(a,b,h){
+                var pole = a * b;
+                var objetosc = pole * h;
+                var wynik = [pole, objetosc];
+                return wynik;
+            }
+        </script>
+
+
+    </head>
+    <body>
+
+        <script>
+            //console.log(poleObjetosc(2,3,4));
+            document.write("Pole: " + poleObjetosc(2,3,4)[0] + "cm<sup>2</sup>" + "<br>");
+
+            document.write("Objetosc: " + poleObjetosc(2,3,4)[1] + "cm<sup>2</sup>");
+
+
+
+        </script>
+
+    </body>
+</html>

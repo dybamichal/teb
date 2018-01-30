@@ -15,20 +15,22 @@
 
         </form>
         <button id="przycisk">Sprawdź</button><br><br>
-        <div id="wynik"></div><br>
-        <div id="wynik1"></div>
+        <div id="wynik"></div>
         <script>
             var przycisk = document.getElementById("przycisk");
             var imie;
             var nazwisko;
+            var tekst;
             przycisk.onclick = function() {
                 imie = document.getElementById("imie").value;
                 nazwisko = document.getElementById("nazwisko").value;
                 //alert(imie + " " + nazwisko);
                 var blok = document.getElementById("wynik");
                 var blok1 = document.getElementById("wynik1");
-                blok.innerHTML = "Masz na imie: " + imie + "<br>";
-                blok1.innerHTML = "Nazywasz się: " + nazwisko + "<br>";
+                tekst = "Masz na imie: " + imie + "<br><br>";
+                tekst += "Nazywasz się: " + nazwisko + "<br>";
+
+                blok.innerHTML = tekst;
             }
 
         </script>

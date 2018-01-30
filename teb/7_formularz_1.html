@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formularz</title>
+        <link rel="stylesheet" href="style/style1.css">
+    </head>
+    <body>
+
+        <form>
+            <input type="number" id="bok" autofocus>Bok<br>
+
+        </form>
+        <button id="przycisk">Pole</button><br><br>
+        <div id="wynik"></div>
+        <script>
+            var przycisk = document.getElementById("przycisk");
+            var bok;
+            var tekst;
+            przycisk.onclick = function() {
+                bok = document.getElementById("bok").value;
+                var blok = document.getElementById("wynik");
+                var pole = bok * bok;
+                //tekst = '<span style="color: #F90101">Pole kwadratu wynosi: ' + pole + "cm<sup>2</sup></span>";
+                tekst = "Pole kwadratu wynosi: ";
+                tekst += '<span style="color: #F90101">' + pole + "</span>cm<sup>2</sup>";
+                blok.innerHTML = tekst;
+            }
+
+        </script>
+    </body>
+</html>

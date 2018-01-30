@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formularz</title>
+        <link rel="stylesheet" href="style/style1.css">
+    </head>
+    <body>
+
+        <form>
+            Imie:<br>
+            <input type="text" id="imie" autofocus><br><br>
+            Nazwisko:<br>
+            <input type="text" id="nazwisko"><br><br>
+
+        </form>
+        <button id="przycisk">Sprawdź</button><br><br>
+        <div id="wynik"></div><br>
+        <div id="wynik1"></div>
+        <script>
+            var przycisk = document.getElementById("przycisk");
+            var imie;
+            var nazwisko;
+            przycisk.onclick = function() {
+                imie = document.getElementById("imie").value;
+                nazwisko = document.getElementById("nazwisko").value;
+                //alert(imie + " " + nazwisko);
+                var blok = document.getElementById("wynik");
+                var blok1 = document.getElementById("wynik1");
+                blok.innerHTML = "Masz na imie: " + imie + "<br>";
+                blok1.innerHTML = "Nazywasz się: " + nazwisko + "<br>";
+            }
+
+        </script>
+    </body>
+</html>

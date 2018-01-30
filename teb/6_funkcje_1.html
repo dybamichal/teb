@@ -20,12 +20,17 @@
 
         <script>
             //console.log(poleObjetosc(2,3,4));
-            document.write("Pole: " + poleObjetosc(2,3,4)[0] + "cm<sup>2</sup>" + "<br>");
 
-            document.write("Objetosc: " + poleObjetosc(2,3,4)[1] + "cm<sup>2</sup>");
+            var a = prompt("Podaj szerokość");
+            var b = prompt("Podaj długość");
+            var h = prompt("Podaj wysokość");
+            var x = prompt("Podaj wartość", "0 - pole, 1 - objętość");
+            if(x==0){ document.write("Pole: " + poleObjetosc(a,b,h)[x] + "cm<sup>2</sup>" + "<br>");}
+            else if(x==1){document.write("Objętość: " + poleObjetosc(a,b,h)[x] + "cm<sup>2</sup>" + "<br>");}
+            else{document.write("Podałeś błędne dane");}
+            //document.write(poleObjetosc(a,b,h)[x]);
 
-
-
+            //funkcja obliczająca pole lub objętość z pomocą funkcji if
         </script>
 
     </body>

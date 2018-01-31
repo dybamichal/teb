@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PROSTE DZIAŁANIA</title>
+        <link rel="stylesheet" href="style/styl.css">
+    </head>
+    <body>
+
+        <div id="baner"><img src="baner.jpg"></div>
+        <h1>PROSTE DZIAŁANIA</h1>
+        <div id="menu" style="float:none;">menu</div><br><br>
+        <div id="tresc" class="pochylony"></div>
+        <form>
+           Podaj pierwszą liczbę: <input type="number" id="pierwsza"><br><br>
+            Podaj drugą liczbę: <input type="number" id="druga"><br><br>
+
+
+        </form>
+        <button id="dodawanie">Dodawanie</button>
+        <button id="odejmowanie">Odejmowanie</button>
+        <button id="mnozenie">Mnożenie</button>
+        <button id="dzielenie">Dzielenie</button>
+        <div id="komunikat"></div>
+        <script>
+           var elPierwsza = document.getElementById("pierwsza");
+            var elDruga = document.getElementById("druga");
+            var elDodawanie = document.getElementById("dodawanie");
+            var elOdejmowanie = document.getElementById("odejmowanie");
+            var elMnozenie = document.getElementById("mnozenie");
+            var elDzielenie = document.getElementById("dzielenie");
+            var elKomunikat = document.getElementById("komunikat");
+            function puste(){
+                if(elPierwsza.value.length == 0){alert("Puste pole pierwsze");}
+
+            }
+            function dodawanie(){
+                var x = parseFloat(elPierwsza.value);
+                var y = parseFloat(elDruga.value);
+                elKomunikat.innerHTML = x + y;
+
+            }
+            elDodawanie.addEventListener('click', puste);
+            elOdejmowanie.addEventListener('click', puste);
+            elMnozenie.addEventListener('click', puste);
+            elDzielenie.addEventListener('click', puste);
+
+        </script>
+    </body>
+</html>

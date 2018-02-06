@@ -1,5 +1,5 @@
-var pi = Math.PI;
-var x = prompt("Podaj wartość: ");
+/*var pi = Math.PI;
+//var x = prompt("Podaj wartość: ");
 console.log(Math.sqrt(x));
 var a = 13.2;
 var b = 28.5;
@@ -60,6 +60,32 @@ console.log(typeof(j)); //number
 j = j.toPrecision(4);
 console.log(j);
 
-//losuj liczby z przedziału <0; 10>
+//losuj liczby z przedziału <o; 1o>
+var l = Math.floor(Math.random()*11);
+console.log(l);
 
+//losuj liczbę od 1o do 2o
 
+var o = Math.floor(Math.random()*11+10);
+console.log(o);
+
+//losuj liczbę z przedziału 31, 5o
+var ol = Math.floor(Math.random()*20 + 31);
+console.log(ol);
+
+//zad.1 uzytkownik zaznacza jedno z 2 pol radio 1 pole - obwod                      2 pole - pole kwadratu*/
+
+var bok = document.getElementById("bok");
+var obwod = document.getElementById("obwod");
+var pole = document.getElementById("pole");
+var przycisk = document.getElementById("przycisk");
+var komunikat = document.getElementById("komunikat");
+
+function oblicz(){
+if(obwod.checked){
+var obwd = 4* bok.value;
+obwd = obwd.toFixed(2);
+komunikat.innerHTML = "Obwód kwadratu wynosi: " + obwod;
+}
+
+}

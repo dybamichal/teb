@@ -43,3 +43,52 @@ elKomunikat.textContent = tekstk;
 }
 
 elPrzycisk.addEventListener('click', wyswietl);
+
+
+
+/*
+//break
+var n;
+
+for(n = 10; n>= 5; n--){
+document.write(n + " ");
+if(n==7){break;}
+}
+
+//continue
+for(var o = 14; o < 20; o++){
+if(o==15 || 18){continue;}
+document.write(o + " ");
+} //naprawić continue
+*/
+
+/*wyświetl na ekranie
+*
+**
+***
+****
+*****
+*/
+
+/*for(var p= 1; p <=5; p++){
+for(var r = 1; r <=p; r++){
+document.write("*");
+}
+document.write("<br>");
+
+
+
+}*/
+
+var elWiersz = document.getElementById("wiersz");
+var elZnak = document.getElementById("znak");
+var elPrzyciskk = document.getElementById("przyciskk");
+var elKomunikatt = document.getElementById("komunikatt");
+
+function znaczki(){
+    for(var p= 1; p <=elWiersz; p++){
+            for(var r = 1; r <=p; r++){
+                document.write(elZnak);
+            }
+}
+elPrzyciskk.addEventListener('click', znaczki);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Formularze_1</title>
+</head>
+<body>
+ <form name="suwak">
+ 	<input type="range" id="suwak" list="procent">
+ 	<datalist id="procent">
+ 		<option value="0" label="0%"></option>
+ 		<option value="50" label="50%"></option>
+ 		<option value="100" label="110%"></option>
+ 	</datalist>
+ </form>
+<hr>
+ <form>
+ 	<input type="url" list="strony">
+ 	<datalist id="strony">
+ 		<option value="http://apple.pl">
+ 		<option value="http://samsung.pl">
+ 		<option value="http://sony.pl">
+ 		<option value="http://toshiba.pl">
+ 		<option value="http://matsushita.pl">
+ 	</datalist>
+ </form>
+<hr>
+ <form name="przegladarka">
+ 	<label for="mojaPrzegladarka">Wybierz przeglądarke</label>
+ 	<input list="p" id="przegladarka" name="mojaPrzegladarka">
+ 	<datalist id="p">
+ 		<option value="Safari">
+ 		<option value="Firefox">
+ 		<option value="Chrome">
+ 		<option value="Edge">
+ 		<option value="Vivaldi">
+ 		<option value="Android web view">
+ 	</datalist>
+ </form>
+<hr>
+<h3>Tęperatura</h3>
+<meter min="36" max="43" value="37">Teperatura ciaua</meter>
+<h3>Tęperatura_2</h3>
+<meter min="36" max="43" value="39">
+</body>
+</html>

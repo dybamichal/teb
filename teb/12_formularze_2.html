@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<title>Formularze</title>
 </head>
 <body>
-	<script src="js/12_formularze.js"></script>
+ <form method="post" action="dane.php">
+ 	<div id="blad"></div><br>
+ 	<input type="color" id="kolor"><br>
+ 	<input type="text" id="imie" name="imie" placeholder="imie" autofocus><br><br>
+ 	<input type="text" id="nazwisko" name="nazwisko" placeholder="nazwisko" autofocus><br><br>
+ 	<input type="submit" id="przycisk" name="przycisk" value="Wyslij">
+ </form>
+ <script src="js/12_formularze.js"></script>
 </body>
 </html>

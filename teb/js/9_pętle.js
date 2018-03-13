@@ -92,3 +92,7 @@ function znaczki(){
             }
 }
 elPrzyciskk.addEventListener('click', znaczki);
+
+
+//użytkownik podaje z klawiatury 2 wartości, pętla będzie wykonywała się tak długo, opuki x będzie >= y;
+

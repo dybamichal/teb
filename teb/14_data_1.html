@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<title>Datai czasy</title>
+	 <link rel="stylesheet" href="style/data.css">
+		 <script>
+	  function odliczanie(){
+				var teraz = new Date();
+			var miesiac = teraz.getMonth() +1;
+			var rok = teraz.getFullYear();
+			var godzina = teraz.getHours();
+			var minuta = teraz.getMinutes();
+			var sekunda = teraz.getSeconds();
+			if (sekunda <10){
+				sekunda = '0' + sekunda;
+			}			if (minuta <10){
+				minuta = '0' + minuta;
+			}			if (godzina <10){
+				godzina = '0' + godzina;
+			}
+
+			switch(miesiac){
+				case 1:
+					miesiac = 'styczen';
+					break;				case 2:
+					miesiac = 'luty';
+					break;				case 3:
+					miesiac = 'marzec';
+					break;				case 4:
+					miesiac = 'kwiecien';
+					break;				case 5:
+					miesiac = 'mai';
+					break;				case 6:
+					miesiac = 'czerwiec';
+					break;				case 7:
+					miesiac = 'lipiec';
+					break;				case 8:
+					miesiac = 'sierpien';
+					break;				case 9:
+					miesiac = 'wrzesien';
+					break;				case 10:
+					miesiac = 'pazdziernik';
+					break;				case 11:
+					miesiac = 'listopad';
+					break;				case 12:
+					miesiac = 'grudzien';
+
+			}
+			var dzien = teraz.getDate(); //dzien miesiaca
+				document.getElementById('data').innerHTML = dzien + ' ' + miesiac + ' ' + rok;
+				document.getElementById('godzina').innerHTML = ' | ' + godzina+":"+minuta+':'+sekunda;
+				setTimeout('odliczanie()', 1000); //to ma byc w 3 div i w 3 kolorach
+			}
+
+	 </script>
+</head>
+<body onload="odliczanie()">
+<div id='data'></div>
+<div id='godzina'></div>
+</body>
+</html>

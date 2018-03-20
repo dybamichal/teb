@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<title>Obiekty</title>
+</head>
+<body>
+	 <script>
+	  var fiat = {
+				marka: 'fiat',
+				model: ' stilo',
+				rok: 2001,
+				kolor: ' rdzawy',
+				przebieg: 20000,
+				stan: ' w środku tosty były jedzone',
+				wyswietl: function(){
+					document.write('Auto marzeń: ' + this.marka + this.model);
+				}
+			};
+		fiat.wyswietl();
+		if (fiat.przebieg <150000){
+			document.write('? kłamiesz świrze <br><br>');
+		}
+
+
+
+
+
+
+
+ var jan = {
+		imie: 'Jan',
+		nazwisko: 'Kowalski',
+		plec: 'mezczyzna',
+		waga: 140,
+		wiek: 44
+	}
+	var agata = {
+		imie: 'Agata',
+		nazwisko: 'Kosakowska',
+		plec: 'inne',
+		waga: 67,
+		wiek: 18
+	}
+	var sredniaWaga;
+	var sredniWiek;
+			sredniWiek = (agata.wiek + jan.wiek)/2;
+			document.write('sredni wiek: ' + sredniWiek + '<br><br>');
+		 sredniaWaga = (agata.waga + jan.waga)/2;
+			document.write('srednia waga: ' + sredniaWaga)
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Zdarzenia</title>
+</head>
+<body>
+<button id="el">Poka</button>
+<div id="blok"></div>
+	<script>
+	 var element = document.getElementById('el');
+	 var blok = document.getElementById('blok');
+		function pokaz(){
+			console.log(this);
+		}
+		element.addEventListener('click', function(){
+			blok.textContent += 'click';		});
+			element.addEventListener('mousedown', function(){
+				blok.textContent +='nacisniecie myszy';  });
+
+		element.addEventListener('mouseup', function(){
+			blok.textContent +='puszczenie myszy';  });
+
+		element.addEventListener('mouseover', function(){
+			blok.textContent +='mouse over';  });
+
+		element.addEventListener('mousemove', function(){
+			blok.textContent +='mouse move';  });
+
+		element.addEventListener('mouseout', function(){
+			blok.textContent +='mouse out';  });
+
+			element.addEventListener('dblclick', function(){
+			blok.textContent =' ';  });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Obiekty</title>
+</head>
+<body>
+	<form>
+		<input type="text" id="imie" placeholder="imie"><br>
+		<input type="text" id="nazwisko" placeholder="nazwisko"><br>
+		<input type="number" id="wiek" placeholder="wiek"><br>
+		<input type="number" id="waga" placeholder="waga"><br>
+	</form>
+	<button id="create">Create</button>
+	<div id="diw"></div>
+	<script>
+		var elImie = document.getElementById('imie');
+		var elNazwisko = document.getElementById('nazwisko');
+		var elWiek = document.getElementById('wiek');
+		var elWaga = document.getElementById('waga');
+		var elCreate = document.getElementById('create');
+		var elDiw = document.getElementById('diw');
+		function Osoba(imie, nazwisko, wiek, waga){
+			this.imie = imie;
+			this.nazwisko = nazwisko;
+			this.wiek = wiek;
+			this.waga = waga;
+			this.wyswietl = function(){
+				return 'imie: '+ this.imie+', nazwisko: '+ this.nazwisko+', wiek: '+this.wiek+', waga: '+this.waga
+			}
+		}
+
+		function wyswietlanie(){
+			var a = elImie.value;
+			var b = elNazwisko.value;
+			var c = elWiek.value;
+			var d = elWaga.value;
+
+			var obiekt = new Osoba(a, b, c, d);
+			elDiw.innerHTML = obiekt.wyswietl();
+		}
+		elCreate.addEventListener('click', wyswietlanie);
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		//tablice w obiekcie
+
+		var platnosci = {
+			pokoj0: [50, 100, 1500],
+			pokoj1: [150, 100],
+			pokoj2: [50],
+			pokoj3: [50, 100, 250]
+
+};
+		console.log(platnosci.pokoj0);
+		console.log(platnosci.pokoj2.length);
+
+		function Pies(imie, rasa, waga, ulubioneZajecia){
+			this.imie = imie;
+			this.rasa = rasa;
+			this.waga = waga;
+			this.ulubioneZajecia = ulubioneZajecia;
+		}
+
+		var azor = new Pies('Azor', 'bokser', 20, ['spacery', 'aportowanie', 'bieganie']);
+		var saba = new Pies('Saba', 'kundel', 8, ['spacery']);
+
+		var psy = [azor, saba];
+		console.log(psy);
+		saba.ulubioneZajecia.push = 'spanie';
+	</script>
+</body>
+</html>

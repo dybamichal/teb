@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Obiekty_1</title>
+</head>
+<body>
+	 <div id="dane"></div>
+	<script>
+	 //tworzenie obiektu za pomoca literalu
+		var janusz = {
+			wzrost : 181,
+			waga : 97,
+			miejsceUrodzenia : 'Poznań',
+			plec : 'm'
+		};
+
+		console.log(janusz.wzrost);
+
+		var auto = {
+			marka: 'Opel',
+			model: 'Zafira',
+			rok: 1994,
+			predkosc: 180,
+			wyswietl(){
+				document.write('Marka: ' + this.marka + ', model: ' + this.model);
+			}
+
+		};
+
+		auto.wyswietl();
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		var ksiazka = {
+			tytul: 'Pan Tadeusz',
+			wykonana: 1834,
+			gatunek: 'Poemat literacki',
+			autor: {
+				imie: 'Adam',
+				nazwisko: 'Mickiewicz',
+				wyswietlDane(){
+					return 'Imie: '+ this.imie + ', nazwisko: ' + this.nazwisko;
+				}
+			}
+		}
+	 console.log(ksiazka.autor.imie);
+	 console.log(ksiazka['autor']['nazwisko']);
+	 console.log(ksiazka.autor['nazwisko']);
+
+		var klucz = 'imie';
+		console.log(ksiazka['autor'][klucz]);
+
+		var elDane = document.getElementById('dane');
+		elDane.innerHTML = ksiazka.autor.wyswietlDane();
+
+	 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		var produkt = {};
+
+	 //sprawdzanie, czy wlasciwosc istnieje
+
+		console.log(typeof(produkt.nazwa)); //undefined
+
+		//dodawanie wlasciwosci i metod do obiektu
+
+		produkt.nazwa = 'Pralka';
+		produkt.firma = 'Sharp';
+		produkt.model = 'WAK2024BPI';
+		produkt.waga = 8;
+		produkt.cena = 1749;
+		produkt.wyswietl = function(){
+			return 'Nazwa produktu: '+ this.nazwa + '<br>Firma: ' + this.firma + '<br>Model: '+this.model + '<br>Waga: '+ this.waga + '<br>Cena: '+this.cena
+		}
+		console.log(typeof(produkt.nazwa));//string
+		console.log(typeof(produkt.wyswietl()));//string
+
+		delete produkt.waga;
+		document.write(produkt.wyswietl());
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		function hotel(nazwa, pokoje, pokojeZarezerwowane){
+			this.nazwa = nazwa;
+			this.pokoje = pokoje;
+			this.pokojeZarezerwowane = pokojeZarezerwowane;
+			this.wolnePokoje = function(){
+				return this.pokoje - this.pokojeZarezerwowane;
+			}
+
+		};
+
+		var Hilton = new hotel('Hilton', 200, 115);
+
+		document.write('<br>Wolne pokoje w hotelu Hilton: '+Hilton.wolnePokoje());
+
+		function Osoba(imie, nazwisko, wiek, waga){
+			this.imie = imie;
+			this.nazwisko = nazwisko;
+			this.wiek = wiek;
+			this.waga = waga;
+		}
+
+
+		var Janusz = new Osoba('Janusz', 'Nowak', 24, 85)
+		document.write('<br>imie: '+Janusz.imie+'<br>nazwisko: '+Janusz.nazwisko+'<br>wiek: '+Janusz.wiek+'<br>waga: '+Janusz.waga+'kg');
+	</script>
+
+</body>
+</html>

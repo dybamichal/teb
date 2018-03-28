@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Kwadracik</title>
+	<style>
+		#kwadrat {
+			width:100px;
+			height: 100px;
+			background-color: #3cba54;
+			position: absolute;
+			margin-top: 10px;
+			margin-left: 10px;
+		}
+		#przyciski {
+			margin: auto;
+			padding: 10px;
+			width: 250px;
+			/*background-color: #4885ed;*/
+		}
+	</style>
+</head>
+<body>
+	<div id="kwadrat"></div>
+	<div id="przyciski">
+		<button id="lewo">lewo</button>
+		<button id="gora">góra</button>
+		<button id="prawo">prawo</button>
+		<button id="dol">dół</button>
+	</div>
+	<script>
+	 var left = document.getElementById('lewo');
+	 var up = document.getElementById('gora');
+	 var right = document.getElementById('prawo');
+		var down = document.getElementById('dol');
+		var x_poz = 10;
+		var y_poz = 10;
+		var k = document.getElementById('kwadrat');
+
+		function uP(){
+				if(k.offsetTop != 0){
+				y_poz += -10;
+				k.style.top = y_poz + 'px';
+				}
+		}
+
+		up.addEventListener('click', uP);
+	</script>
+</body>
+</html>

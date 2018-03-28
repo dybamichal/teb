@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Kwadracik</title>
 	<style>
+			body {
+					background-color: #f4c20d;
+			}
 		#kwadrat {
 			width:100px;
 			height: 100px;
@@ -11,6 +14,7 @@
 			position: absolute;
 			margin-top: 10px;
 			margin-left: 10px;
+			border-radius: 10px;
 		}
 		#przyciski {
 			margin: auto;
@@ -23,28 +27,66 @@
 <body>
 	<div id="kwadrat"></div>
 	<div id="przyciski">
-		<button id="lewo">lewo</button>
-		<button id="gora">góra</button>
-		<button id="prawo">prawo</button>
-		<button id="dol">dół</button>
+		<button id="lewo"> < </button>
+		<button id="gora"> ^ </button>
+		<button id="prawo"> > </button>
+		<button id="dol"> v </button>
+		<button id="reset"> c </button>
 	</div>
 	<script>
 	 var left = document.getElementById('lewo');
 	 var up = document.getElementById('gora');
 	 var right = document.getElementById('prawo');
 		var down = document.getElementById('dol');
+		var reset = document.getElementById('reset');
 		var x_poz = 10;
 		var y_poz = 10;
 		var k = document.getElementById('kwadrat');
+		var w  = window;
+		var wys = w.innerHeight - 110;
+		var szer = w.innerWidth - 110;
 
 		function uP(){
 				if(k.offsetTop != 0){
-				y_poz += -10;
+				 y_poz += -10;
+				 k.style.top = y_poz + 'px';
+				 /*up.disabled = false;*/
+				}/*else{
+				 up.disabled = true;
+				}*/
+		}
+
+		function dOWN(){
+				if(k.offsetTop < wys){
+				y_poz += 10;
 				k.style.top = y_poz + 'px';
 				}
 		}
 
-		up.addEventListener('click', uP);
+		function lEFT(){
+			if(k.offsetLeft != 0){
+			x_poz += -10;
+			k.style.left = x_poz + 'px';
+			}
+	} //lewo nie dziala, idzie w dol
+
+		function rIGHT(){
+			if(k.offsetLeft < szer){
+			x_poz += 10;
+			k.style.left = x_poz + 'px';
+			}
+	}
+
+			function reseting(){
+					k.style.top = '10px';
+					k.style.left = '10px';
+			}
+
+		up.addEventListener('mousemove', uP);
+		down.addEventListener('mousemove', dOWN);
+		left.addEventListener('mousemove', lEFT);
+		right.addEventListener('mousemove', rIGHT);
+		reset.addEventListener('click', reseting);
 	</script>
 </body>
 </html>

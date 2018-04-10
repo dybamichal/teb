@@ -11,11 +11,19 @@
 		var wysokosc = window.screen.height;
 		var maxSzerokosc = window.screen.availWidth;
 		var maxWysokosc = window.screen.availHeight;
+		var okno = window.open('https://niebezpiecznik.pl', 'niebezpiecznik', 'width=400, height=400, left=500, top=300');
 		console.log(glebiaKolorow);
 		console.log(szerokosc);
 		console.log(wysokosc);
 		console.log(maxSzerokosc);
 		console.log(maxWysokosc);
+
+		document.write('<input type="submit" id="p" value="Zamknij okno">');
+		function zamknij(){
+			okno.close();
+		}
+
+		p.addEventListener('click', zamknij);
 	</script>
 </body>
 </html>

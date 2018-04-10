@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Bom</title>
+</head>
+<body>
+ <button id="p">Odświerz</button>
+ <button id="p1">WP</button>
+ <button id="p2">Onet</button>
+ <button id="p3">16_bom_1_1</button>
+	<script>
+	 //BOM = browser object model
+		var p = document.getElementById('p');
+		var p1 = document.getElementById('p1');
+		var p2 = document.getElementById('p2');
+		var p2 = document.getElementById('p3');
+
+		var imie = 'Janusz';
+		console.log(imie);
+		console.log(window.imie);
+		var wiek = prompt('Podaj wiek');
+		wiek = window.parseFloat(wiek);
+
+		document.write(window.navigator.userAgent);
+
+		for (var i in location){
+			console.log(i + '=' + location[i]);
+		}
+
+		function odswiez(){
+			window.location.reload();
+		}
+
+		function wp(){
+			window.location.assign('http://wp.pl');
+		}
+
+		function zmienStrone(){
+			window.location.replace('http://onet.pl');
+		}
+
+		function zmienStrone1(){
+			window.location.assign('16_bom_1_1.html')
+		}
+
+		p.addEventListener('click', odswiez);
+		p1.addEventListener('click', wp);
+		p2.addEventListener('click', zmienStrone);
+		p2.addEventListener('click', zmienStrone1);
+
+		console.log(window.history.length);
+	</script>
+</body>
+</html>

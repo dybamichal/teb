@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ie">
+<head>
+	<meta charset="UTF-8">
+	<title>Sortowanie Babelkowe</title>
+</head>
+<body>
+	<h2>Podaj liczby do posortowania</h2>
+	<form>
+		<input type="number" id="l" placeholder="liczba">
+	</form>
+	<button id="p">Prześlij</button>
+	<button id="w">Wyświetl</button>
+	<div id="div"></div>
+	<script src="1_babelkowe.js">
+	</script>
+	<script>
+		var l = document.getElementById('l');
+		var p = document.getElementById('p');
+		var w = document.getElementById('w');
+		var div = document.getElementById('div');
+		var k = [];
+		function dodaj(){
+			let x = Number(l.value);
+			k.push(x);
+		  console.log(k);
+		}
+
+		function wys(){
+			let tablica = [];
+			for (var i=0; i=k.length; i++){
+				tablica+=k[i];
+				tablica+=' ';
+				div.innerHTML=tablica;
+			}
+		}
+		p.addEventListener('click', dodaj);
+		w.addEventListener('click', wys);
+
+	</script>
+</body>
+</html>

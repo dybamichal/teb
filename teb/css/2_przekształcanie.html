@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Przekształcanie</title>
+	<style>
+		#rodzic {
+			perspective: 300px;
+			position: relative;
+			height: 400px;
+			background-color: black;
+		}
+
+		#rodzic > div {
+			position: absolute;
+			width: 400px;
+			height: 100px;
+			line-height: 100px;
+			font-family: Helvetica;
+			text-align: center;
+			color: #db3236;
+			background-color: #db3236;
+			/*transform: perspective(300px)*/
+			/*transform: rotateY(30deg)*/
+		}
+
+		#dziecko1 {
+			top: 30px;
+			left: 30px;
+			transform: rotateY(25deg);
+		}
+
+		#dziecko2 {
+			top: 150px;
+			left: 30px;
+			transform: rotateY(25deg);
+		}
+
+		#dziecko3 {
+			top: 270px;
+			left: 30px;
+			transform: rotateY(25deg);
+		}
+
+		#dziecko4 {
+			top: 30px;
+			right: 30px;
+			transform: rotateY(-20deg);
+		}
+
+		#dziecko5 {
+			top: 150px;
+			right: 30px;
+			transform: rotateY(-20deg);
+		}
+
+		#dziecko6 {
+			top: 270px;
+			right: 30px;
+			transform: rotateY(-20deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="rodzic">
+		<div id="dziecko1">1</div>
+		<div id="dziecko2">2</div>
+		<div id="dziecko3">3</div>
+		<div id="dziecko4">4</div>
+		<div id="dziecko5">5</div>
+		<div id="dziecko6">6</div>
+	</div>
+</body>
+</html>

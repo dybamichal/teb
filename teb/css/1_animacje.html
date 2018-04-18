@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Animacje</title>
+	<style>
+		#div1 {
+			width: 150px;
+			height: 150px;
+			/*//line-height: 75px;*/
+			color: #db3236;
+			text-align: center;
+			font-size: 25px;
+			background-color: #db3236;
+			font-family: helvetica;
+			line-height: 150px;
+			border-radius: 15px;
+			animation: przesunXY 4s linear infinite;
+			filter: opacity(75%)
+		}
+
+		@keyframes przesunXY {
+			0% {transform: translateX(0px) translateY(0px);}
+			25% {transform: translateX(400px) translateY(0px);}
+			50% {transform: translateY(400px) translateX(400px);}
+			75% {transform: translateY(400px) translateX(0px);}
+			100% {transform: translateY(0px) translateX(0px);}
+		}
+
+		#div2 {
+			width: 300px;
+			height: 300px;
+			background-color: #3cba54;
+			border-radius: 15px;
+			animation: posunXY 4s linear infinite;
+			filter: opacity(75%);
+		}
+
+		@keyframes posunXY {
+			0% {transform: rotate3d(1,1,0,0);}
+			100% {transform: rotate3d(1,1,0,360deg);}
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">DIV</div>
+	<div id="div2"></div>
+</body>
+</html>

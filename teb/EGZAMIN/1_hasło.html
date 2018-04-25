@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Hasło</title>
+</head>
+<body style="font-family: helvetica">
+	<h1>sprawdzanie hasła</h1>
+	<div id="text">silne hasło</div><br>
+	<form>
+		<input type="radio" id="dobre" name="wybor">dobre haslo<br>
+		<input type="radio" id="srednie" name="wybor">średnie hasło<br><br>
+		<input type="text" id="haslo"><br><br>
+	</form>
+	<button id="przycisk">sprawdź</button><br><br>
+	<div id="opisHasla">opis hasła.....</div>
+
+	<script>
+		var text = document.getElementById('text');
+		var dobre = document.getElementById('dobre');
+		var srednie = document.getElementById('srednie');
+		var haslo = document.getElementById('haslo');
+		var przycisk = document.getElementById('przycisk');
+		var opisHasla = document.getElementById('opisHasla');
+
+		function opis(){
+			if(dobre.checked){
+				opisHasla.innerHTML = 'długość 8, lub więcej znaków, zawiera co najmniej jedną cyfrę, małą i dużą literę oraz kropkę';
+			}
+			if(srednie.checked){
+				opisHasla.innerHTML = 'długość 4-6 znaków, zawiera przynajmniej jedną cyfrę';
+			}
+		}
+
+		function sprawdzHaslo(){
+			let pass = haslo.value;
+
+
+			//srednie
+			var regSrednie = /[0-9]/;
+			//dobre
+			var male = /[a-z]/;
+			var duze = /[A-Z]/;
+			var kropka = /\./;
+
+			//brak hasla
+			if(pass.length==0){
+				text.innerHTML = 'WPISZ HASŁO!';
+				text.style.color = 'red';
+			}else if(pass.length >=8 && regSrednie.test(pass) && male.test(pass) && duze.test(pass) && kropka.test(pass)){
+							 text.innerHTML = 'dobre hasło';
+							 text.style.color = '#3cba54';
+			}else if(regSrednie.test(pass) && pass.length >= 4 && pass.length <=6){
+				text.innerHTML = 'średnie hasło';
+				text.style.color = '#0266C8';
+			}else{
+				text.innerHTML = 'słabe hasło';
+				text.style.color = '#f4c20d';
+			}
+		}
+
+		dobre.addEventListener('click', opis);
+		srednie.addEventListener('click', opis);
+		przycisk.addEventListener('click', sprawdzHaslo);
+	</script>
+</body>
+</html>
